@@ -1,9 +1,3 @@
-//
-//  FindDJsView.swift
-//  DJA
-//
-//  Created by Ben St Arnaud on 2024/05/25.
-//
 import SwiftUI
 
 struct DiscJockey: Identifiable {
@@ -32,7 +26,18 @@ struct FindDJsView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
+                ZStack {
+                    Color.gray
+                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .frame(height: 90)
+                       
+                    Text("Find DJs")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.yellow)
+                }
+                
                 TextField("Enter location", text: $searchQuery)
                     .padding()
                     .background(Color.gray.opacity(0.2))
@@ -51,7 +56,8 @@ struct FindDJsView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .navigationTitle("Find DJs")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
     }
 }

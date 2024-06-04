@@ -1,9 +1,3 @@
-//
-//  HomeView.swift
-//  DJA
-//
-//  Created by Ben St Arnaud  on 2024/05/25.
-//
 import SwiftUI
 
 struct HomeView: View {
@@ -11,7 +5,18 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
+                ZStack {
+                    Color.gray
+                        .edgesIgnoringSafeArea(.top)
+                        .frame(height: 90)
+                    
+                    Text("Home")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.yellow)
+                }
+                
                 CustomTabSwitcher(selectedTab: $selectedTab)
                     .padding()
                 
@@ -64,3 +69,4 @@ struct CustomTabSwitcher: View {
 #Preview {
     HomeView()
 }
+

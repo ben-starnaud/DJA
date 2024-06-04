@@ -5,11 +5,26 @@ struct MessagingView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
+                ZStack {
+                    Color.gray
+                        .edgesIgnoringSafeArea(.top)
+                        .frame(height: 90)
+                    
+                    Text("Messages")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.yellow)
+                }
+                
                 SearchBar(text: $searchText)
+                    .padding(.horizontal)
+                    .padding(.top)
+                
                 Spacer()
             }
-            .navigationTitle("Messages")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
     }
 }

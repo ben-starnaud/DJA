@@ -1,10 +1,3 @@
-//
-//  TrendingDJsView.swift
-//  DJA
-//
-//  Created by Ben St Arnaud on 2024/05/26.
-//
-
 import SwiftUI
 
 struct DJ: Identifiable {
@@ -21,25 +14,29 @@ struct TrendingDJsView: View {
     ]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Text("Trending DJs near you")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .padding(.horizontal)
-                .padding(.top)
-            
-            List(trendingDJs) { dj in
-                VStack(alignment: .leading) {
-                    Text(dj.name)
-                        .font(.headline)
-                    Text(dj.popularity)
-                        .font(.subheadline)
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+               
+                
+                List(Array(trendingDJs.enumerated()), id: \.element.id) { index, dj in
+                    HStack(alignment: .top) {
+                        Text("\(index + 1).")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        VStack(alignment: .leading) {
+                            Text(dj.name)
+                                .font(.headline)
+                            Text(dj.popularity)
+                                .font(.subheadline)
+                        }
+                        .padding(.vertical, 5)
+                    }
                 }
-                .padding(.vertical, 5)
+                .listStyle(PlainListStyle())
             }
-            .listStyle(PlainListStyle())
+            .navigationBarTitle("DJs", displayMode: .inline)
         }
-        .navigationBarTitle("DJs", displayMode: .inline)
     }
 }
 

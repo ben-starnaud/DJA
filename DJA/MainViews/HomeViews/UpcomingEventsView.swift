@@ -1,10 +1,3 @@
-//
-//  UpcomingEventsView.swift
-//  DJA
-//
-//  Created by Ben St Arnaud on 2024/05/26.
-//
-
 import SwiftUI
 
 struct Event: Identifiable {
@@ -22,30 +15,37 @@ struct UpcomingEventsView: View {
     ]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Text("Upcoming events in Stellenbosch")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .padding(.horizontal)
-                .padding(.top)
-
-            List(upcomingEvents) { event in
-                VStack(alignment: .leading) {
-                    Text(event.name)
-                        .font(.headline)
-                    Text(event.date)
-                        .font(.subheadline)
-                    Text(event.location)
-                        .font(.subheadline)
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                
+                
+                List(Array(upcomingEvents.enumerated()), id: \.element.id) { index, event in
+                    HStack(alignment: .top) {
+                        Text("\(index + 1).")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        VStack(alignment: .leading) {
+                            Text(event.name)
+                                .font(.headline)
+                            Text(event.date)
+                                .font(.subheadline)
+                            Text(event.location)
+                                .font(.subheadline)
+                        }
+                        .padding(.vertical, 5)
+                    }
                 }
-                .padding(.vertical, 5)
+                .listStyle(PlainListStyle())
+                
+    
             }
-            .listStyle(PlainListStyle())
+            .navigationBarTitle("Events", displayMode: .inline)
         }
-        .navigationBarTitle("Events", displayMode: .inline)
     }
 }
 
 #Preview {
     UpcomingEventsView()
 }
+
