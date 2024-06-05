@@ -30,6 +30,7 @@ struct MainView: View {
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
+            
         }
     }
 }

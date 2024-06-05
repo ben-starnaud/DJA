@@ -20,8 +20,10 @@ struct MessagingView: View {
                 SearchBar(text: $searchText)
                     .padding(.horizontal)
                     .padding(.top)
-                
                 Spacer()
+                Text("You have 0 new messages").font(.subheadline).bold()
+                Spacer()
+            
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)

@@ -8,6 +8,8 @@ struct Event: Identifiable {
 }
 
 struct UpcomingEventsView: View {
+    var selectedLocation: String
+    
     let upcomingEvents: [Event] = [
         Event(name: "Summer Beats", date: "June 15, 2024", location: "Beach Club"),
         Event(name: "Night Vibes", date: "June 20, 2024", location: "Downtown Arena"),
@@ -46,6 +48,6 @@ struct UpcomingEventsView: View {
 }
 
 #Preview {
-    UpcomingEventsView()
+    UpcomingEventsView(selectedLocation: "Stellenbosch")
 }
 

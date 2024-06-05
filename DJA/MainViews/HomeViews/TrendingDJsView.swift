@@ -7,6 +7,8 @@ struct DJ: Identifiable {
 }
 
 struct TrendingDJsView: View {
+    var selectedLocation: String
+    
     let trendingDJs: [DJ] = [
         DJ(name: "DJ Cool Mix", popularity: "Trending #1"),
         DJ(name: "DJ Beat Master", popularity: "Trending #2"),
@@ -41,6 +43,6 @@ struct TrendingDJsView: View {
 }
 
 #Preview {
-    TrendingDJsView()
+    TrendingDJsView(selectedLocation: "Stellenbosch")
 }
 

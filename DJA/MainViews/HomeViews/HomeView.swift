@@ -2,7 +2,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedTab = 0
-
+    @State private var selectedLocation = "New York"  // Default location
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
@@ -17,13 +18,16 @@ struct HomeView: View {
                         .foregroundColor(.yellow)
                 }
                 
+                LocationBarView(selectedLocation: $selectedLocation)
+                    .padding()
+                
                 CustomTabSwitcher(selectedTab: $selectedTab)
                     .padding()
                 
                 TabView(selection: $selectedTab) {
-                    UpcomingEventsView()
+                    UpcomingEventsView(selectedLocation: selectedLocation)
                         .tag(0)
-                    TrendingDJsView()
+                    TrendingDJsView(selectedLocation: selectedLocation)
                         .tag(1)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -33,6 +37,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 struct CustomTabSwitcher: View {
     @Binding var selectedTab: Int
@@ -65,6 +70,26 @@ struct CustomTabSwitcher: View {
         .cornerRadius(10)
     }
 }
+
+struct LocationBarView: View {
+    @Binding var selectedLocation: String
+    let locations = ["Stellenbosch", "Gardens", "Parrow", "Stilbaai", "Hout Bay"]
+    
+    var body: some View {
+        Picker("Select Location", selection: $selectedLocation) {
+            ForEach(locations, id: \.self) {
+                Text($0)
+            }
+        }
+        .pickerStyle(MenuPickerStyle())
+        .padding()
+        .background(Color.white.opacity(0.2))
+        .cornerRadius(10)
+        .foregroundColor(.black)
+        
+    }
+}
+
 
 #Preview {
     HomeView()

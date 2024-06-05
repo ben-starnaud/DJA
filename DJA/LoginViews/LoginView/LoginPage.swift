@@ -79,6 +79,8 @@ struct LoginView: View {
             }.background(Color(.systemGray6))
             
             Spacer()
+            
+            Text("Ts and Cs Apply").font(.caption)
         }
         .padding()
         .fullScreenCover(isPresented: $isLoggedIn) {
