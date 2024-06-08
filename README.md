@@ -1,4 +1,4 @@
-# DJA - DJ Finder App
+# DJA - Our DJ Finder App
 
 Welcome to DJA, a SwiftUI-based application designed to help users find DJs based on their location, genre preferences, experience level, and availability. This app provides a seamless and user-friendly interface to search for DJs and view their profiles and availability.
 
@@ -12,10 +12,10 @@ Welcome to DJA, a SwiftUI-based application designed to help users find DJs base
 - [Contact](#contact)
 
 ## Features
-- **Home View**: Navigate through upcoming events and trending DJs.
-- **Profile View**: View and manage user profile information and account settings.
-- **Find DJs View**: Search for DJs based on location with advanced filter options.
-- **Filters View**: Apply filters such as genre, experience level, and availability to refine DJ search results.
+- **Home**: Navigate through upcoming events and trending DJs.
+- **Settings**: View and manage user profile information and account settings.
+- **Find DJs**: Search for DJs based on location with advanced filter options.
+- **Messaging**: Send Messages to potential clients and employees
 
 ## Installation
 To get started with DJA, follow these steps:
@@ -34,12 +34,6 @@ To get started with DJA, follow these steps:
 3. **Run the project:**
     - Select the target device (simulator or real device).
     - Click the "Run" button or press \`Cmd + R\`.
-
-## Usage
-- **Home View**: Displays a navigation bar with tabs for Upcoming Events and Trending DJs.
-- **Profile View**: View user details and access settings such as payments, preferences, activity, and account settings.
-- **Find DJs View**: Search for DJs by entering a location and applying filters. The "Filters" button opens a detailed filter view.
-- **Filters View**: Adjust filters like genre, experience level, and availability to narrow down search results.
 
 ## Screenshots
 | Home View | Profile View | Find DJs View | Filters View |
