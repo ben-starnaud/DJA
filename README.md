@@ -35,11 +35,6 @@ To get started with DJA, follow these steps:
     - Select the target device (simulator or real device).
     - Click the "Run" button or press \`Cmd + R\`.
 
-## Screenshots
-| Home View | Profile View | Find DJs View | Filters View |
-| --- | --- | --- | --- |
-| ![Home View](path/to/home-view-screenshot.png) | ![Profile View](path/to/profile-view-screenshot.png) | ![Find DJs View](path/to/find-djs-view-screenshot.png) | ![Filters View](path/to/filters-view-screenshot.png) |
-
 ## Contributing
 Contributions are welcome! If you have any improvements or suggestions, please follow these steps:
 
