@@ -5,8 +5,6 @@ Welcome to DJA, a SwiftUI-based application designed to help users find DJs base
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
