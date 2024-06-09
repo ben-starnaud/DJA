@@ -5,15 +5,17 @@ struct ProfileView: View {
         NavigationView {
             VStack(spacing: 0) {
                 ZStack {
-                    Color.gray
+                    LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.8), Color.white.opacity(0.4)]), startPoint: .top, endPoint: .bottom)
                         .edgesIgnoringSafeArea(.top)
                         .frame(height: 90)
                     
                     Text("Profile")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.blue)
+                        .shadow(color: .black.opacity(0.2), radius: 2, x: 1, y: 1)
                 }
+
                 
                 List {
                     Section(header: Text("User Information")) {

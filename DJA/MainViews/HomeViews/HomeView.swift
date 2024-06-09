@@ -8,18 +8,17 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 0) {
                 ZStack {
-                    Color.gray
+                    LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.8), Color.white.opacity(0.4)]), startPoint: .top, endPoint: .bottom)
                         .edgesIgnoringSafeArea(.top)
                         .frame(height: 90)
                     
                     Text("Home")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.blue)
+                        .shadow(color: .black.opacity(0.2), radius: 2, x: 1, y: 1)
                 }
                 
-                LocationBarView(selectedLocation: $selectedLocation)
-                    .padding()
                 
                 CustomTabSwitcher(selectedTab: $selectedTab)
                     .padding()
@@ -71,24 +70,6 @@ struct CustomTabSwitcher: View {
     }
 }
 
-struct LocationBarView: View {
-    @Binding var selectedLocation: String
-    let locations = ["Stellenbosch", "Gardens", "Parrow", "Stilbaai", "Hout Bay"]
-    
-    var body: some View {
-        Picker("Select Location", selection: $selectedLocation) {
-            ForEach(locations, id: \.self) {
-                Text($0)
-            }
-        }
-        .pickerStyle(MenuPickerStyle())
-        .padding()
-        .background(Color.white.opacity(0.2))
-        .cornerRadius(10)
-        .foregroundColor(.black)
-        
-    }
-}
 
 
 #Preview {

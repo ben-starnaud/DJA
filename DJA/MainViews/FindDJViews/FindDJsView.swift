@@ -7,6 +7,7 @@ struct DiscJockey: Identifiable {
     var genre: String
     var experience: String
     var available: Bool
+    var image: String // Image name in the asset catalog
 }
 
 struct FindDJsView: View {
@@ -16,11 +17,11 @@ struct FindDJsView: View {
     @State private var isAvailable = false
     
     let allDJs: [DiscJockey] = [
-        DiscJockey(name: "DJ Cool Mix", location: "New York", genre: "House", experience: "Expert", available: true),
-        DiscJockey(name: "DJ Beat Master", location: "Los Angeles", genre: "Hip-Hop", experience: "Intermediate", available: false),
-        DiscJockey(name: "DJ Groove", location: "Chicago", genre: "EDM", experience: "Beginner", available: true),
-        DiscJockey(name: "DJ Rock", location: "New York", genre: "Rock", experience: "Expert", available: true),
-        DiscJockey(name: "DJ Wave", location: "Miami", genre: "Pop", experience: "Intermediate", available: false)
+        DiscJockey(name: "DJ Cool Mix", location: "New York", genre: "House", experience: "Expert", available: true, image: "dj_cool_mix"),
+        DiscJockey(name: "DJ Beat Master", location: "Los Angeles", genre: "Hip-Hop", experience: "Intermediate", available: false, image: "dj_beat_master"),
+        DiscJockey(name: "DJ Groove", location: "Chicago", genre: "EDM", experience: "Beginner", available: true, image: "dj_groove"),
+        DiscJockey(name: "DJ Rock", location: "New York", genre: "Rock", experience: "Expert", available: true, image: "dj_rock"),
+        DiscJockey(name: "DJ Wave", location: "Miami", genre: "Pop", experience: "Intermediate", available: false, image: "dj_wave")
     ]
     
     var filteredDJs: [DiscJockey] {
@@ -36,14 +37,15 @@ struct FindDJsView: View {
         NavigationView {
             VStack(spacing: 0) {
                 ZStack {
-                    Color.gray
-                        .edgesIgnoringSafeArea(.all)
+                    LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.8), Color.white.opacity(0.4)]), startPoint: .top, endPoint: .bottom)
+                        .edgesIgnoringSafeArea(.top)
                         .frame(height: 90)
                     
-                    Text("Find DJs")
-                        .font(.title2)
+                    Text("Find DJ's")
+                        .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.blue)
+                        .shadow(color: .black.opacity(0.2), radius: 2, x: 1, y: 1)
                 }
                 
                 VStack(spacing: 10) {
@@ -64,20 +66,35 @@ struct FindDJsView: View {
                 }
                 .padding(.top)
                 
-                List(filteredDJs) { dj in
-                    VStack(alignment: .leading) {
-                        Text(dj.name)
-                            .font(.headline)
-                        Text(dj.location)
-                            .font(.subheadline)
-                        Text("Genre: \(dj.genre)")
-                            .font(.subheadline)
-                        Text("Experience: \(dj.experience)")
-                            .font(.subheadline)
-                        Text("Available: \(dj.available ? "Yes" : "No")")
-                            .font(.subheadline)
+                List {
+                    ForEach(filteredDJs.indices, id: \.self) { index in
+                        HStack {
+                            Text("\(index + 1).")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                                .frame(width: 20, alignment: .leading)
+                            
+                            Image(filteredDJs[index].image)
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading) {
+                                Text(filteredDJs[index].name)
+                                    .font(.headline)
+                                Text(filteredDJs[index].location)
+                                    .font(.subheadline)
+                                Text("Genre: \(filteredDJs[index].genre)")
+                                    .font(.subheadline)
+                                Text("Experience: \(filteredDJs[index].experience)")
+                                    .font(.subheadline)
+                                Text("Available: \(filteredDJs[index].available ? "Yes" : "No")")
+                                    .font(.subheadline)
+                            }
+                            .padding(.leading, 5)
+                        }
+                        .padding(.vertical, 5)
                     }
-                    .padding(.vertical, 5)
                 }
                 .listStyle(PlainListStyle())
             }
