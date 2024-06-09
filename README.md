@@ -52,6 +52,6 @@ If you have any questions, feel free to reach out:
 
 - **Name**: Ben St Arnaud
 - **Email**: benstarnaudwork.com
-- **GitHub**: [benstarnaud](https://github.com/benstarnaud)
+- **GitHub**: [benstarnaud](https://github.com/ben-starnaud)
 
 Thank you for using DJA!
