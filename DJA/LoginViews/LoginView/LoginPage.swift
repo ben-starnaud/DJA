@@ -87,7 +87,7 @@ struct LoginView: View {
             MainView()
         }
         .fullScreenCover(isPresented: $wantsToRegister) {
-            RegistrationPage()
+            IndividualRegistrationPage()
         }
     }
 }

@@ -20,9 +20,6 @@
 		2F63BA642C023AB7003D06C8 /* MessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63BA632C023AB7003D06C8 /* MessagingView.swift */; };
 		2F63BA662C023AC8003D06C8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63BA652C023AC8003D06C8 /* ProfileView.swift */; };
 		2F63BA682C023AD8003D06C8 /* FindDJsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63BA672C023AD8003D06C8 /* FindDJsView.swift */; };
-		2F72E8912C05F6FE005705DE /* RegistrationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E8902C05F6FE005705DE /* RegistrationPage.swift */; };
-		2F72E8952C0601F2005705DE /* isDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E8942C0601F2005705DE /* isDJ.swift */; };
-		2F72E8972C0601FF005705DE /* isEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E8962C0601FF005705DE /* isEmployer.swift */; };
 		2F72E8992C060210005705DE /* isIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E8982C060210005705DE /* isIndividual.swift */; };
 		2F8AED1B2C039981008FC659 /* UpcomingEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AED1A2C039981008FC659 /* UpcomingEventsView.swift */; };
 		2F8AED1D2C039990008FC659 /* TrendingDJsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AED1C2C039990008FC659 /* TrendingDJsView.swift */; };
@@ -62,9 +59,6 @@
 		2F63BA632C023AB7003D06C8 /* MessagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingView.swift; sourceTree = "<group>"; };
 		2F63BA652C023AC8003D06C8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2F63BA672C023AD8003D06C8 /* FindDJsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindDJsView.swift; sourceTree = "<group>"; };
-		2F72E8902C05F6FE005705DE /* RegistrationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
-		2F72E8942C0601F2005705DE /* isDJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isDJ.swift; sourceTree = "<group>"; };
-		2F72E8962C0601FF005705DE /* isEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isEmployer.swift; sourceTree = "<group>"; };
 		2F72E8982C060210005705DE /* isIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIndividual.swift; sourceTree = "<group>"; };
 		2F8AED1A2C039981008FC659 /* UpcomingEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsView.swift; sourceTree = "<group>"; };
 		2F8AED1C2C039990008FC659 /* TrendingDJsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingDJsView.swift; sourceTree = "<group>"; };
@@ -185,9 +179,6 @@
 		2F72E88F2C05F2E8005705DE /* RegisterPage */ = {
 			isa = PBXGroup;
 			children = (
-				2F72E8902C05F6FE005705DE /* RegistrationPage.swift */,
-				2F72E8942C0601F2005705DE /* isDJ.swift */,
-				2F72E8962C0601FF005705DE /* isEmployer.swift */,
 				2F72E8982C060210005705DE /* isIndividual.swift */,
 			);
 			path = RegisterPage;
@@ -361,11 +352,8 @@
 				2F8AED1B2C039981008FC659 /* UpcomingEventsView.swift in Sources */,
 				2F63BA682C023AD8003D06C8 /* FindDJsView.swift in Sources */,
 				2F8AED1D2C039990008FC659 /* TrendingDJsView.swift in Sources */,
-				2F72E8912C05F6FE005705DE /* RegistrationPage.swift in Sources */,
 				2F63BA322C0223A2003D06C8 /* ContentView.swift in Sources */,
 				2F63BA5C2C0225FA003D06C8 /* MainView.swift in Sources */,
-				2F72E8972C0601FF005705DE /* isEmployer.swift in Sources */,
-				2F72E8952C0601F2005705DE /* isDJ.swift in Sources */,
 				2F63BA642C023AB7003D06C8 /* MessagingView.swift in Sources */,
 				2F72E8992C060210005705DE /* isIndividual.swift in Sources */,
 				2F63BA622C023AA3003D06C8 /* HomeView.swift in Sources */,
