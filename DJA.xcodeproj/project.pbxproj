@@ -112,13 +112,7 @@
 		2F63BA2E2C0223A2003D06C8 /* DJA */ = {
 			isa = PBXGroup;
 			children = (
-				2F72E88D2C05F2AE005705DE /* LoginViews */,
-				2F63BA692C023C69003D06C8 /* MainViews */,
-				2F63BA2F2C0223A2003D06C8 /* DJAApp.swift */,
-				2F63BA312C0223A2003D06C8 /* ContentView.swift */,
-				2F63BA5B2C0225FA003D06C8 /* MainView.swift */,
-				2F63BA332C0223A4003D06C8 /* Assets.xcassets */,
-				2F63BA352C0223A4003D06C8 /* Preview Content */,
+				2F90439C2C17415B001761C4 /* Frontend */,
 			);
 			path = DJA;
 			sourceTree = "<group>";
@@ -216,6 +210,20 @@
 				2F63BA672C023AD8003D06C8 /* FindDJsView.swift */,
 			);
 			path = FindDJViews;
+			sourceTree = "<group>";
+		};
+		2F90439C2C17415B001761C4 /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				2F63BA332C0223A4003D06C8 /* Assets.xcassets */,
+				2F63BA352C0223A4003D06C8 /* Preview Content */,
+				2F63BA5B2C0225FA003D06C8 /* MainView.swift */,
+				2F63BA312C0223A2003D06C8 /* ContentView.swift */,
+				2F63BA2F2C0223A2003D06C8 /* DJAApp.swift */,
+				2F63BA692C023C69003D06C8 /* MainViews */,
+				2F72E88D2C05F2AE005705DE /* LoginViews */,
+			);
+			path = Frontend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DJA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DJA/Frontend/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -549,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DJA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DJA/Frontend/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
